@@ -1,0 +1,298 @@
+///////===========Layout===============//////////@at-root
+.navbar{
+    justify-content: space-between;
+    // .navbar__logo img{
+    //     height: 36px;
+    // }
+}
+header.main{
+    padding-top: 30px;
+}
+
+
+.navbar__nav-menu{
+    color: v(white);
+    background: v(app-background);
+    border: none;
+    cursor: pointer;
+}
+
+.button-wrap{
+    margin: 38px 0;
+}
+
+article{
+    margin-bottom: 3rem;
+}
+
+
+.hero-capsule{
+    background-color: $color-primary;
+    color: $input-text-light;
+    padding: 8px 36px 8px 24px;
+    border-radius: 60px;
+    margin-bottom: 24px;
+    a{
+        color: $input-text-light;
+        text-decoration: underline;
+    }
+}
+
+.input-waitlist{
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    border-radius: 5px;
+    padding: 18px 24px;
+    box-sizing: border-box;
+    &::placeholder{
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #B6B6B6;
+    }
+    @include media-breakpoint-up(sm){
+        width: auto;
+        margin-right: 15px;
+    }
+}
+
+.btn{
+    padding: 16px 24px;
+    @include font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    
+    background-color: v(btn-background);
+    color: v(white);
+    
+    //efect for button press
+    transition-duration: .2s;
+    perspective: 1000px;
+    transform-origin: center bottom 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    // @include media-breakpoint-up(sm){
+    //     width: auto;
+    // }
+}
+.btn:active {
+    transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}
+
+.btn-user-box{
+    padding: 3px 4px;
+    font-size: 18px;
+    border-radius: 2px;
+    &:hover{
+        background-color: v(content-background);
+    }
+}
+
+.companies{
+    padding: 10px 0 ;
+    flex-wrap: wrap;
+}
+
+.jobs{
+    >:not(:last-child){
+        margin-bottom:24px;
+    }
+    .job-item{
+        padding: 24px;
+        background: v(content-background);
+        > a > div:first-child > :last-child{
+        //    margin-bottom: 24px;
+        margin-left: 17px;
+        // background: cadetblue;
+        }
+        > a > div:first-child {
+            margin-bottom: 24px;
+        }
+
+        .tag{
+            padding: 10px;
+            background: v(app-background);
+            text-transform: capitalize;
+        }
+        
+    }
+}
+.location{
+    color: v(text-muted);
+}
+
+.job-item-wrapper{
+    .job-item-header{
+        padding: 32px 20px;
+        background-color: v(content-background);
+    }
+    .job-item-body{
+       
+        background-color: v(content-background);
+        .job-item-more-info{
+            padding: 32px 20px;
+            background-color: v(app-background);
+            >:not(:first-child){
+                padding-left: 15px;
+            }
+            .item{
+                color: v(text-muted);
+            }
+        
+        }
+        .company-desc{
+            padding: 32px 20px;
+            h2{
+                padding-bottom:16px;
+            }
+        }
+        .job-requirements{
+            padding: 0 20px 32px;
+            h2{
+                padding-bottom:16px;
+            }
+        }
+        .job-apply-btn{
+            background: v(color-secondary);
+            margin: 32px 20px;
+        }
+    }
+}
+
+#filter{
+    border: none;
+    > div:not(:last-child){
+        margin-bottom: 56px;
+    }
+    .box{
+        .box-label{
+            margin-bottom: 16px;
+        }
+    }
+    .tick{
+        // input[type=checkbox]{
+        //     width: 18px;
+        //     height: 18px;
+
+        //     accent-color: #0dcd7d;
+        //     border: 1px solid #8F9BB3;
+        //     border-radius: 2px;
+        // }
+        // input[type=checkbox]:checked::before {
+        //     width: 18px;
+        //     height: 18px;
+        //     background-color: #00AEEF;
+        //   }
+        // input[type=checkbox] {
+        //     position: relative;
+        //     cursor: pointer;
+        //   }
+          
+        //   input[type=checkbox]:before {
+        //     content: "";
+        //     position: absolute;
+        //     width: 16px;
+        //     height: 16px;
+        //     top: 0;
+        //     left: 0;
+        //     border: 1px solid #ab5c07;
+        //     border-radius: 3px;
+        //     padding: 1px;
+        //     background-color: #ac9c0a;
+        //   }
+          
+        //   input[type=checkbox]:checked:before {
+        //     background-color: #00AEEF;
+        //   }
+          
+        //   input[type=checkbox]:checked:after {
+        //     content: "";
+        //     display: block;
+        //     width: 5px;
+        //     height: 10px;
+        //     border: solid rgb(220, 20, 224);
+        //     border-width: 0 2px 2px 0;
+        //     -webkit-transform: rotate(45deg);
+        //     -ms-transform: rotate(45deg);
+        //     transform: rotate(45deg);
+        //     position: absolute;
+        //     top: 2px;
+        //     left: 6px;
+        //   }
+    }
+
+    .tick {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+         /* Hide the browser's default checkbox */
+       & input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+          
+      }
+      
+      /* Create a custom checkbox */
+      .check {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        border-radius: 2px;
+        background-color: v(app-background);
+        border: 2px v(text-muted) solid;
+      }
+      
+      /* On mouse-over, add a grey background color */
+      .tick:hover input ~ .check {
+        background-color: v(content-background);
+        // border: 2px blue solid;
+      }
+      
+      /* When the checkbox is checked, add a blue background */
+      .tick input:checked ~ .check {
+        background-color: #002B4E;
+      }
+      
+      /* Create the check/indicator (hidden when not checked) */
+      .check:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+      /* Show the checkmark when checked */
+      .tick input:checked ~ .check:after {
+        display: block;
+      }
+      
+      /* Style the checkmark/indicator */
+      .tick .check:after {
+        height: 10px;
+        left: 4px;
+        top: 1px;
+        width: 5px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(35deg);
+        -ms-transform: rotate(35deg);
+        transform: rotate(35deg);
+      }
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='./assets/css/styles.css'>
+    
+    <title>Workside</title>
+</head>
+<body>
+    <div class="theme-wrapper">
+    <header class="main">
+      <div class="navbar">
+        <div class="container position-relative">
+
+          <div class="navbar__logo">
+              <a href="/">
+                <img src="./assets/img/Workside Logo.svg" alt="brand logo">
+              </a>
+          </div>
+          <nav class="navbar__nav d-flex align-items-center justify-content-lg-between">
+              <ul class="navbar__nav-list">
+                  <li class="navbar__nav-item">
+                      <a href="">
+                          <span class="icon d-none"></span><span>Find a Job</span>
+                      </a>
+                  </li>
+                  <li class="navbar__nav-item">
+                      <a href="">
+                          <span class="icon d-none"></span><span>Submit a Job</span>
+                      </a>
+                  </li>
+                  <li class="navbar__nav-item">
+                      <a href="">
+                          <span class="icon d-none"></span><span>Sponsor Us</span>
+                      </a>
+                  </li>
+              </ul>
+              <div class="navbar__nav-menuicon d-lg-none d-xl-none d-xxl-none">
+              <button class="navbar__nav-menu js-menu-togle " type="button"   aria-controls="collapsibleNavId"
+                  aria-expanded="false" aria-label="Toggle navigation">
+                  <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="currentColor"/>
+                    </svg>                            
+              </button>
+              </div>
+              <button class="btn d-none d-lg-flex justify-content-between align-items-center btn-user-box">
+                <img src="./assets/img/Avatar.svg" alt="user avatar">
+                <span class="user-info mx-3">Oliva Benjamin</span>
+                <img class="dropdown-caret" src="./assets/img/Down Arrow.svg" alt="">
+                <div class="dropdown-menu dropdown-menu-end d-none">	
+                  <a class="dropdown-item" href="javascript:;">
+                    <i class="bx bx-user"></i><span>Profile</span></a>
+                  <a class="dropdown-item" href="javascript:;"><i class="bx bx-cog"></i><span>Settings</span></a>
+                  <div class="dropdown-divider mb-0"></div>	<a class="dropdown-item" href="javascript:;"><i class="bx bx-power-off"></i><span>Logout</span></a>
+                </div>
+              </button>
+          </nav>
+
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="main-wrapper container">
+          <!-- <div class="row g-0">
+            <div class="col">abc</div>
+            <div class="col">def</div>
+          </div>   -->
+            <div class="row">
+              <div class="col-xl-3 col-xxl-2">
+                <div class="button-wrap clearfix d-xl-none">
+                  <button class="btn back-btn float-start d-none">Back</button>
+                  <button class="btn filter-btn float-end btn-pressed" style="--btn-background:var(--content-background)">Filters<img class="dropdown-caret" src="./assets/img/Down Arrow.svg" alt=""> </button>
+                </div>
+                <div id="filter" class="p-2 ms-md-4 ms-sm-2 d-none d-xl-block">
+
+                  <div class="box">
+                      <div class="box-label text-uppercase d-flex align-items-center title-secondary"  style="--font-weight: 700">Location
+                          <!-- <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#location" aria-expanded="false" aria-controls="location">  </button> -->
+                      </div>
+                      <div id="location" class="collapse show subtitle-primary muted" style="--font-weight: 400">
+                          <div class="my-3">
+                              <label class="tick d-flex">
+                                <input type="checkbox" checked="checked"> <span class="check"></span>
+                                Remote
+                              </label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"> 
+                                <input type="checkbox"> <span class="check"></span>
+                                  United States
+                                </label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>India </label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Australia </label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Poland </label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Canada</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="box">
+                      <div class="box-label text-uppercase d-flex align-items-center title-secondary"  style="--font-weight: 700">Payment
+                          <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#payment" aria-expanded="false" aria-controls="payment"></button>
+                      </div>
+                      <div id="payment" class="collapse subtitle-primary muted" style="--font-weight: 400">
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Verified</label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Unverified</label>
+                          </div>
+                          
+                      </div>
+                  </div>
+                  <div class="box">
+                      <div class="box-label text-uppercase d-flex align-items-center title-secondary"  style="--font-weight: 700">Level
+                          <button class="btn ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#level" aria-expanded="false" aria-controls="level"> </button>
+                      </div>
+                      <div id="level" class="collapse show subtitle-primary muted" style="--font-weight: 400">
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Entry
+                                   </label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Intermediate
+                                  </label>
+                          </div>
+                          <div class="my-3">
+                              <label class="tick"><input type="checkbox" > <span class="check"></span>Expert </label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-lg-5 col-xl-4 col-xxl-4">
+                <ul class="jobs">
+                  <li class="job-item ">
+                    <a class="d-flex flex-column" href="#">
+                      <div class="d-flex">
+                        <img class="" src="./assets/img/First Job Logo.svg" alt=job logo">
+                        <div>
+                          <div class="job-title d-inline-block subtitle-primary"  style="--font-weight: 700">Looking for a freelance frontend developer</div>
+                          <div class="d-flex align-items-center ">
+                            <img class="img-fluid logo-icon" src="./assets/img/Location.png" alt="">
+                            <span class="location subtitle-primary" style="--font-weight: 400">Virginia, United States</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <ul class="tags d-flex mar-item-r2">
+                          <li class="tag">frontend</li>
+                          <li class="tag">Webdev</li>
+                        </ul>
+                        <div class="d-flex align-items-center pad-item-l1">
+                          <img src="./assets/img/Checkmark Verified.svg" alt="icon verified">
+                          <span class="subtitle-primary" style="--font-weight: 700">Payment Verified</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class=" col-lg-7 col-xl-5 col-xxl-6">
+                <div class="job-item-wrapper">
+                  <header class="job-item-header d-flex justify-content-between align-items-center">
+                    <div class="d-flex flex-column">
+                      <span class="title-primary" style="--font-weight: 700">Looking for a freelance frontend developer</span>
+                      <span class="location subtitle-primary" style="--font-weight: 400">Virginia, United States</span>
+                    </div>
+                    <div class="subtitle-primary" style="--font-weight: 400">
+                      Posted 4 days ago
+                    </div>
+                  </header>
+                  <div class="job-item-body">
+                    <ul class="job-item-more-info d-flex justify-content-xxl-around">
+                      <li class="d-flex flex-column">
+                        <span class="item-head">Experience</span>
+                        <span class="item">Expert</span>
+                      </li>
+                      <li  class="d-flex flex-column">
+                        <span class="item-head">Location</span>
+                        <span class="item">Virginia, United States</span>
+                      </li>
+                      <li  class="d-flex flex-column">
+                        <span class="item-head">Salary Range</span>
+                        <span class="item">$100-$200/hr</span>
+                      </li>
+                    </ul>
+                    <div class="company-desc">
+                      <h2 class="subtitle-primary" style="--font-weight: 700">Company Overview</h2>
+                      <p class="muted">
+                        Dividstar was established in 1932 by Matthew Cohens in Virginia, United States. Dividstar has been the leader application for personal finance over the past 10 decades and aim to continue holding that position. As times continue to evolve, we do too.
+                      </p>
+                    </div>
+                    <div class="job-requirements">
+                      <h2>Job Requirement</h2>
+                      <ul class="job-requirement-check muted">
+                        <li class="d-flex pad-item-l1">
+                           <img src="./assets/img/Checkmark Verified.svg" alt="icon verified">
+                          <span class="">4 years of professional working experience.</span>
+                        </li>
+                        <li class="d-flex pad-item-l1">
+                          <img src="./assets/img/Checkmark Verified.svg" alt="icon verified">
+                         <span class="">Understanding of Next.js, React, and Angular.</span>
+                       </li>
+                       <li class="d-flex pad-item-l1">
+                        <img src="./assets/img/Checkmark Verified.svg" alt="icon verified">
+                       <span class="">Knowledge of REACT tools including React.js, Webpack, Enzyme, Redux, and Flux.</span>
+                     </li>
+                        
+                      </ul>
+
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn job-apply-btn" style="--btn-background:var(--color-secondary)">Apply Job</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+        </div>
+    </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src='./assets/js/script.js'></script>
+</body>
+</html>
+
+
+
+
